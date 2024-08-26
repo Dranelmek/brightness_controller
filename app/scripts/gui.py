@@ -1,6 +1,6 @@
 import tkinter as tk
-import controller
-from options import *
+from .controller import *
+from .options import *
 
 # root window
 root = tk.Tk()
@@ -17,7 +17,7 @@ label.pack(padx=20, pady=10)
 
 # slider function
 def update(*args):
-    controller.set(val.get())
+    set(val.get())
 
 # brightness slider
 val = tk.DoubleVar()
@@ -25,7 +25,7 @@ slider = tk.Scale(sec, variable=val, from_=1, to=100,orient=tk.HORIZONTAL, font=
 
 
 # main monitor brightness
-brightness = controller.get(GetOptions.SIMPLE)
+brightness = get(GetOptions.SIMPLE)
 slider.set(brightness)
 
 def hide_widget(widget):
@@ -39,5 +39,3 @@ def show_widget(widget):
 
 slider.pack()
 sec.pack()
-
-root.mainloop()
