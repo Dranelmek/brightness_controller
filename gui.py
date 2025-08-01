@@ -1,6 +1,6 @@
 import tkinter as tk
-from .controller import *
-from .options import *
+from controller import *
+from options import *
 
 # root window
 root = tk.Tk()
